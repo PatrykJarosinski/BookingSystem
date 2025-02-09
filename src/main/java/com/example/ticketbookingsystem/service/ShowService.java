@@ -3,7 +3,6 @@ package com.example.ticketbookingsystem.service;
 
 import com.example.ticketbookingsystem.entity.*;
 import com.example.ticketbookingsystem.enums.SeatType;
-import com.example.ticketbookingsystem.exceptions.MovieAlreadyExist;
 import com.example.ticketbookingsystem.exceptions.MovieDoesNotExists;
 import com.example.ticketbookingsystem.exceptions.ShowDoesNotExists;
 import com.example.ticketbookingsystem.exceptions.TheaterDoesNotExists;
@@ -14,7 +13,6 @@ import com.example.ticketbookingsystem.repo.TheaterRepository;
 import com.example.ticketbookingsystem.request.ShowRequest;
 import com.example.ticketbookingsystem.request.ShowSeatRequest;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -100,7 +98,6 @@ public class ShowService {
         showRepository.save(show);
 
         return "show seats have been associated succesfully";
-
     }
 
 }
